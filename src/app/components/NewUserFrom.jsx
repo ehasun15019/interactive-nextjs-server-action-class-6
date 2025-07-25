@@ -1,7 +1,7 @@
 // In addUser Function if we get to understand to it is server function then we have to get provide async function. and then the function return by default fromData in parameter. For this reason we have to give in "name" in input field.
 
 import React from "react";
-import { addUser } from "../../../action/User-action";
+import { addUser } from "../../../action/users-action";
 
 const NewUserFrom = () => {
   return (

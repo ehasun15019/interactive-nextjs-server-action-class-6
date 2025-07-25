@@ -1,5 +1,5 @@
 import React from "react";
-import { getUsers } from "../../../action/User-action";
+import { getUsers } from "../../../action/users-action";
 
 const UserList = async () => {
   const gettingUser = await getUsers();
