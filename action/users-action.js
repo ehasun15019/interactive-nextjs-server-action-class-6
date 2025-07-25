@@ -1,7 +1,10 @@
 "use server";
 
+import { revalidatePath } from "next/cache";
+
 const { createUser, readUsers } = require("../library/UserList");
 
+// ai function ansi ami NavbarUserFrom.jsx component
 export async function addUser(formData) {
   const useData = {
     name: formData.get("name"),
@@ -10,11 +13,15 @@ export async function addUser(formData) {
 
   try {
     const user = await createUser(useData);
+
+    // revalidation path use for server reload
+    revalidatePath("/");
   } catch (error) {
     console.log(error);
   }
 }
 
+// ai function ansi ami UserList.jsx component
 export const getUsers = async () => {
   const users = await readUsers();
 
