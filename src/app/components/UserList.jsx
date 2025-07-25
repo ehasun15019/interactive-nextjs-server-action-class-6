@@ -1,15 +1,7 @@
 import React from "react";
-import { readUsers } from "../../../library/UserList";
+import { getUsers } from "../../../action/User-action";
 
 const UserList = async () => {
-  const getUsers = async () => {
-    "use server";
-
-    const users = await readUsers();
-
-    return users;
-  };
-
   const gettingUser = await getUsers();
 
   return (
