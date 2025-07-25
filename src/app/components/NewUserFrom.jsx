@@ -7,9 +7,10 @@ const NewUserFrom = () => {
   async function addUser(formData) {
     "use server";
 
-    // if we get to check our console in terminal then we see the result.
-    console.log(formData.get("name"));
-    console.log(formData.get("email"));
+    const useData = {
+      name: formData.get("name"),
+      name: formData.get("email"),
+    };
   }
 
   return (
