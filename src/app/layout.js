@@ -20,8 +20,9 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body className="px-5">
-        <main className="mx-auto rounded max-w-5xl min-h-[100vh]"></main>
+        <main className="mx-auto rounded max-w-5xl min-h-[100vh]">
         {children}
+        </main>
       </body>
     </html>
   );
