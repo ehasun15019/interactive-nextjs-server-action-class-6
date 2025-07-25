@@ -2,6 +2,7 @@
 
 import React from "react";
 import { addUser } from "../../../action/users-action";
+import Button from "./ui/Button";
 
 const NewUserFrom = () => {
   return (
@@ -25,12 +26,7 @@ const NewUserFrom = () => {
       </div>
 
       <div>
-        <button
-          type="submit"
-          className="bg-blue-500 text-white rounded px-3 py-2 w-full"
-        >
-          Submit
-        </button>
+        <Button />
       </div>
     </form>
   );
