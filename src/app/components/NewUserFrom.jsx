@@ -1,6 +1,7 @@
 // In addUser Function if we get to understand to it is server function then we have to get provide async function. and then the function return by default fromData in parameter. For this reason we have to give in "name" in input field.
 
 import React from "react";
+import { createUser } from "../../../library/UserList";
 
 const NewUserFrom = () => {
   // for realize it is server function to use "use server"
@@ -9,8 +10,14 @@ const NewUserFrom = () => {
 
     const useData = {
       name: formData.get("name"),
-      name: formData.get("email"),
+      email: formData.get("email"),
     };
+
+    try {
+      const user = await createUser(useData);
+    } catch (error) {
+      console.log(error);
+    }
   }
 
   return (

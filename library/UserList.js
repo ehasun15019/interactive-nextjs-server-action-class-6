@@ -9,7 +9,7 @@ export const createUser = async (userData) => {
         }
     });
 
-    const user = await res.json();
+    const users = await res.json();
 
-    return user;
+    return users;
 }
