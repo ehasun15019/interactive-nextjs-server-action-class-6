@@ -1,5 +1,6 @@
 "use server";
 
+import wait from "@/wait/wait";
 import { revalidatePath } from "next/cache";
 
 const { createUser, readUsers } = require("../library/UserList");
@@ -13,7 +14,7 @@ export async function addUser(formData) {
 
   try {
     const user = await createUser(useData);
-
+    await wait(3000);
     // revalidation path use for server reload
     revalidatePath("/");
   } catch (error) {
