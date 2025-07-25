@@ -20,7 +20,7 @@ const UserList = async () => {
         {gettingUser.length > 0 ? (
           gettingUser.map((user, index) => (
             <p key={user.id}>
-              {index} : {user.name} , {user.email}
+              {index + 1} : {user.name} , {user.email}
             </p>
           ))
         ) : (
